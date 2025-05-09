@@ -21,3 +21,125 @@
 .leaflet-disabled {
     color: grey !important;
 }
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    outline: none;
+    z-index: 600;
+}
+
+.arrow-icon {
+    width: 30px;
+    height: 30px;
+    z-index: 700;
+}
+
+.arrow-left {
+  position: fixed;
+  bottom: 30px; 
+  left: 20px; 
+}
+
+.arrow-right {
+  position: fixed;
+  bottom: 30px;
+  right: 20px; 
+}
+
+.icon-button:active .arrow-icon {
+    opacity: 0.5;
+}
+
+.icon-button:disabled .arrow-icon {
+    opacity: 0.4;
+}
+
+.flipbook {
+    z-index: 450;
+  }
+  
+.flipbook-wrapper {
+    width: 660px;
+    height: 725px;
+    overflow: hidden;
+    display: block;
+    z-index: 470;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+  
+.hoverable-word {
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  z-index: 1;
+}
+
+.hoverable-word:hover {
+  color: black;
+  background-color: #ffc14e;
+  border-radius: 4px;
+}
+
+.hoverable-word::after {
+  content: attr(data-tooltip); 
+  position: absolute;
+  top: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 250px;
+  background-color: var(--tooltip-bg, rgb(255, 255, 255));
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  font-size: 10pt;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1002;
+  overflow-y: auto;
+}
+
+.hoverable-word:hover::after {
+  opacity: 1;
+  visibility: visible;
+  left: auto;
+}
+
+/* so that the dottet word is not visible when tooltip is activated */
+.hoverable-word:hover {
+  z-index: 1003; 
+}
+
+.narrative-fragment-text {  
+  position: relative;
+  z-index: 1001; 
+  pointer-events: auto;
+}
+  
+.back-to-map-button {
+    position: fixed; /* Ensures positioning relative to the viewport */
+    top: 20px;
+    right: 20px;
+    width: fit-content;
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+    font-size: 10pt !important;
+    font-family: var(--font) !important;
+    border-color: var(--text) !important;
+    border-width: 1px !important;
+    z-index: 600;
+}
+  

@@ -12,15 +12,49 @@
     background-color: var(--hadi);
     color: var(--background);
 }
-
-#azar-span {
-    background-color: var(--azar);
+#hadi-button {
+    background-color: var(--hadi);
     color: var(--background);
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    border: 1px solid var(--hadi);
 }
 
-#darya-span {
+#hadi-button:hover {
+    background-color: transparent; 
+    color: var(--hadi);
+}
+
+#azar-button {
+    background-color: var(--azar);
+    color: var(--background);
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--azar);
+}
+
+#azar-button:hover {
+    background-color: transparent; 
+    color: var(--azar);
+}
+
+#darya-button {
     background-color: var(--darya);
     color: var(--background);
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--darya); 
+}
+
+#darya-button:hover {
+    background-color: transparent; 
+    color: var(--darya);
 }
 
 #toast-icon {

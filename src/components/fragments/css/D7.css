@@ -44,3 +44,27 @@
     margin: auto;
     margin-bottom: 20px;
 }
+
+/* Tooltip-Container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Tooltip-Text */
+  .tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%; /* über dem Element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 10pt;
+    white-space: nowrap;
+    z-index: 1000;
+  }
+  
